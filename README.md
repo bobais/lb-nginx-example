@@ -1,14 +1,14 @@
 
 Place files so the structure looks like 
- * /root/sites/site1
- * /root/sites/site2
- * /root/sites/lb
+* /root/sites/site1
+* /root/sites/site2
+* /root/sites/lb
 
-Install nginx and stop the default instance (blocks port 80)
-* nginx -s stop
+Install nginx and stop the default instance (blocks port 80).
+* nginx -s stop
 
-Disable autostart for default nginx
-* update-rc.d nginx disable
+Disable autostart for default nginx.
+* update-rc.d nginx disable
 
 Load shortcuts
 * . /root/sites/shortcuts
