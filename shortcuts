@@ -1,0 +1,12 @@
+
+alias example_init="\
+ln -s /usr/sbin/nginx /root/sites/lb/lb;\
+ln -s /usr/sbin/nginx /root/sites/site1/web1;\
+ln -s /usr/sbin/nginx /root/sites/site2/web2"
+
+alias lb_start="/root/sites/lb/lb -c /root/sites/lb/lb.conf"
+alias lb_reload="/root/sites/lb/lb -c /root/sites/lb/lb.conf -s reload"
+alias w1_start="/root/sites/site1/web1 -c /root/sites/site1/web1.conf"
+alias w1_stop="/root/sites/site1/web1 -c /root/sites/site1/web1.conf -s stop"
+alias w2_start="/root/sites/site2/web2 -c /root/sites/site2/web2.conf"
+alias w2_stop="/root/sites/site2/web2 -c /root/sites/site2/web2.conf -s stop"
