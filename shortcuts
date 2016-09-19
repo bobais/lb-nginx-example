@@ -1,4 +1,4 @@
-
+#!/bin/bash
 alias example_init="\
 ln -s /usr/sbin/nginx /root/sites/lb/lb;\
 ln -s /usr/sbin/nginx /root/sites/site1/web1;\
@@ -9,6 +9,10 @@ alias example_stop="lb_stop;w1_stop;w2_stop"
 alias lb_start="/root/sites/lb/lb -c /root/sites/lb/lb.conf"
 alias lb_reload="/root/sites/lb/lb -c /root/sites/lb/lb.conf -s reload"
 alias lb_stop="/root/sites/lb/lb -c /root/sites/lb/lb.conf -s stop"
+alias lb_w1_disable="sed -i '' '/8010/s/^/#/g' /root/sites/lb/lb.conf && lb_reload"
+alias lb_w1_enable="sed -i '' '/8010/s/^#//g' /root/sites/lb/lb.conf && lb_reload"
+alias lb_w2_disable="sed -i '' '/8020/s/^/#/g' /root/sites/lb/lb.conf && lb_reload"
+alias lb_w2_enable="sed -i '' '/8020/s/^#//g' /root/sites/lb/lb.conf && lb_reload"
 alias w1_start="/root/sites/site1/web1 -c /root/sites/site1/web1.conf"
 alias w1_stop="/root/sites/site1/web1 -c /root/sites/site1/web1.conf -s stop"
 alias w2_start="/root/sites/site2/web2 -c /root/sites/site2/web2.conf"
