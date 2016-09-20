@@ -1,8 +1,8 @@
 
 Place files so the structure looks like 
-* /root/sites/site1
-* /root/sites/site2
-* /root/sites/lb
+* /root/lb-nginx-example/site1
+* /root/lb-nginx-example/site2
+* /root/lb-nginx-example/lb
 
 Install nginx and stop the default instance (blocks port 80).
 * nginx -s stop
@@ -11,7 +11,7 @@ Disable autostart for default nginx.
 * update-rc.d nginx disable
 
 Load shortcuts
-* . /root/sites/shortcuts
+* . /root/lb-nginx-example/shortcuts
 
 Use
 * example_init (use if neccessary - creates symlinks)
